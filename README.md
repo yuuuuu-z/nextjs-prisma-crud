@@ -27,7 +27,7 @@ The application uses a simple `Post` model defined in `prisma/schema.prisma`
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-github-username/nextjs-prisma-crud.git
+git clone https://github.com/yuuuuu-z/nextjs-prisma-crud.git
 cd nextjs-prisma-crud
 ```
 
