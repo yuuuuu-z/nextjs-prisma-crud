@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { getPost } from "./post.actions";
 import { FileText, Plus, Calendar, User, ArrowRight } from "lucide-react";
 import { CreatePostForm } from "./create-post-form";
-import { Post } from "../generated/prisma";
+import { Post } from "@prisma/client";
 
 export default async function PostFormPage() {
   const posts: Post[] = await getPost();
