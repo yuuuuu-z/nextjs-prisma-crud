@@ -11,7 +11,7 @@ This application demonstrates how to use Next.js App Router with Server Actions 
 - Uses Server Actions for data mutations
 - Styling with Tailwind CSS and [shadcn/ui](https://ui.shadcn.com/)
 - Database ORM with Prisma
-- Uses SQLite for the database
+- Uses Postgres (Neon) for the database
 - Demo : https://nextjs-prisma-crud-blue.vercel.app
 
 
