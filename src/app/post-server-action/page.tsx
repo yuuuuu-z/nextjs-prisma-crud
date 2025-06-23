@@ -4,9 +4,10 @@ import { Badge } from "@/components/ui/badge";
 import { getPost } from "./post.actions";
 import { FileText, Plus, Calendar, User, ArrowRight } from "lucide-react";
 import { CreatePostForm } from "./create-post-form";
+import type { Post } from "@/app/generated/prisma";
 
 export default async function PostFormPage() {
-  const posts = await getPost();
+  const posts: Post[] = await getPost();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/30">
@@ -65,7 +66,7 @@ export default async function PostFormPage() {
                     </div>
                   </div>
                 ) : (
-                  posts.map((post, index) => (
+                  posts.map((post) => (
                     <Link
                       href={`/post-server-action/${post.id}`}
                       key={post.id}
@@ -76,7 +77,7 @@ export default async function PostFormPage() {
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-2">
                               <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-xs font-semibold">
-                                {index + 1}
+                                {posts.indexOf(post) + 1}
                               </span>
                               <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors truncate">
                                 {post.title}
